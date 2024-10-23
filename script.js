@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Automatically reload the page every 1 minute for testing
     setTimeout(function () {
         window.location.reload();
-    }, 3 * 60 * 1000); 
+    }, 15 * 60 * 1000); 
 
     function startAutoScroll() {
         function autoScroll() {
