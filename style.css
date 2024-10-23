@@ -1,0 +1,117 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+
+
+.fixed-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    color: #D13624;
+    padding: 10px 0; /* Reduced padding */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    margin-right: auto;
+    margin-left: 20px;
+    max-height: 90px; /* Reduced logo size */
+}
+
+.title {
+    font-size: 40px; /* Reduced title size */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    width: 100%;
+    padding-right: 40px; /* Adjusted padding */
+}
+
+.fullscreen {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 140px); /* Adjusted to account for header and footer */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px; /* Added margin to prevent content from going under the header */
+    margin-bottom: 60px; /* Added margin to prevent content from going under the footer */
+}
+
+.brand-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#social-wall {
+    width: 100%;
+    height: calc(100vh - 140px); /* Adjusted height for the social wall */
+    position: relative;
+    overflow: hidden; /* Hide scrollbar */
+}
+
+#social-wall .wbctA {
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll; /* Enable vertical scrolling */
+    scrollbar-width: none; /* For Firefox */
+}
+
+#social-wall .wbctA::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, and Edge */
+}
+
+
+.fixed-footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #fff;
+    padding: 0px 0; /* Adjust padding to suit the new image */
+    z-index: 1000;
+
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.brand-logos-image {
+    width: 100%; /* Ensure the image spans the footer width */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: contain;
+}
+
+
+
+/* .privacy-policy-link {
+    font-size: 12px;
+    color: #fff;
+    text-decoration: none;
+    margin: 0 auto;
+}
+
+.privacy-policy-link:hover {
+    text-decoration: underline;
+} */
+
+
+
+
