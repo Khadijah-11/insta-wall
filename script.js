@@ -30,19 +30,22 @@ document.addEventListener("DOMContentLoaded", function () {
     brandVideo.onended = function () {
         brandVideoSection.style.display = "none";
         socialWallSection.style.display = "block";
-        
-        // Wait for the social wall content to load before starting auto-scroll
+    
+        // Trigger a resize event to force re-render
+        window.dispatchEvent(new Event('resize'));
+    
         setTimeout(() => {
             restoreScrollPosition(); // Restore scroll position
             startAutoScroll(); // Start the auto-scrolling
             startScrollWatchdog(); // Monitor scroll activity
         }, 1000); 
     };
+    
 
     // Automatically reload the page every 1 minute for testing
     setTimeout(function () {
         window.location.reload();
-    }, 30 * 60 * 1000); 
+    }, 1.8 * 60 * 1000); 
 
     function startAutoScroll() {
         function autoScroll() {
