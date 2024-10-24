@@ -94,7 +94,20 @@ body, html {
     }
     
     .brand-video {
-        height: auto; /* Auto height */
-        max-height: calc(100vh - 60px); /* Limit max height to fit the viewport */
+        width: auto;
+        height: 80%; /* Use a percentage of the viewport height */
+        max-width: 100%; /* Ensure it doesn’t exceed the screen width */
+        max-height: 80vh; /* Limit the video height to avoid overflow */
+        object-fit: cover;
+    }
+}
+/* Medium Screens (Tablets, smaller laptops) */
+@media (min-width: 768px) and (max-width: 1199px) {
+    .brand-video {
+        width: auto;
+        height: 70%; /* Adjust to 70% of viewport height */
+        max-width: 100%; /* Make sure it doesn’t exceed screen width */
+        max-height: 70vh; /* Limit height to avoid overflow */
+        object-fit: contain; /* Ensure proper containment */
     }
 }
