@@ -101,7 +101,7 @@ document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener('beforeunload', saveScrollPosition);
 
     // Reload the social wall every 10 minutes to refresh the content
-    setInterval(reloadSocialWall, 10 * 60 * 1000); 
+    setInterval(reloadSocialWall, 4 * 60 * 60 * 1000); 
 });
 
 
