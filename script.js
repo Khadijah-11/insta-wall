@@ -40,13 +40,13 @@ document.addEventListener("DOMContentLoaded", function () {
             startScrollWatchdog(); // Monitor scroll activity
         }, 1000); 
     };
-    
 
-    // Automatically reload the page every 1 minute for testing
+    // Automatically reload the page after 30 minutes
     setTimeout(function () {
         window.location.reload();
     }, 30 * 60 * 1000); 
 
+    // Function to start automatic scrolling
     function startAutoScroll() {
         function autoScroll() {
             if (socialWallContainer) {
@@ -57,15 +57,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 saveScrollPosition(); // Save scroll position
 
+                // Reset scroll to the top when reaching the bottom
                 if (socialWallContainer.scrollTop + socialWallContainer.clientHeight >= socialWallContainer.scrollHeight) {
-                    socialWallContainer.scrollTop = 0; // Reset to the top
+                    socialWallContainer.scrollTop = 0;
                 }
             }
         }
 
-        autoScrollInterval = setInterval(autoScroll, 30);
+        // Set auto-scroll interval (adjust time as needed)
+        autoScrollInterval = setInterval(autoScroll, 50);
     }
 
+    // Monitor the scroll activity and reload if necessary
     function startScrollWatchdog() {
         scrollWatchdogInterval = setInterval(function () {
             if (socialWallContainer.scrollTop === lastScrollTop) {
@@ -99,15 +102,4 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Save scroll position before unloading the page
     window.addEventListener('beforeunload', saveScrollPosition);
-
-    // Reload the social wall every 10 minutes to refresh the content
-    setInterval(reloadSocialWall, 4 * 60 * 60 * 1000); 
 });
-
-
-
-
-
-
-
-
